@@ -1,0 +1,49 @@
+package com.techelevator.dao;
+
+import com.techelevator.model.Question;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Component
+public class JdbcQuestionDao implements QuestionDao {
+    private final JdbcTemplate jdbcTemplate;
+
+    public JdbcQuestionDao(JdbcTemplate jdbcTemplate){
+        this.jdbcTemplate = jdbcTemplate;
+    }
+    @Override
+    public List<Question> getQuestion() {
+        List<Question> question = new ArrayList<>();
+        String sql = "SELECT question_id, question, answer FROM questions ORDER BY random() LIMIT 1;";
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
+        while (results.next()) {
+            Question eachQuestion = mapRowToQuestion(results);
+            question.add(eachQuestion);
+        }
+        return question;
+    }
+    @Override
+    public Question getQuestionById(int id) {
+        String sql = "SELECT * FROM questions WHERE question_id = ?;";
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, id);
+        if (results.next()){
+            return mapRowToQuestion(results);
+        } else {
+            return null;
+        }
+    }
+    private Question mapRowToQuestion(SqlRowSet row){
+        Question question = new Question();
+        question.setId(row.getInt("question_id"));
+        question.setQuestion(row.getString("question"));
+        question.setAnswer(row.getString("answer"));
+        return question;
+    }
+
+
+
+}
