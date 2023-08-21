@@ -5,15 +5,7 @@ import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import Register from '../views/Register.vue'
 import store from '../store/index'
-import Recipe from '../views/Recipe.vue'
-import RecipeDetails from '../views/RecipeDetails.vue';
-import RecipeBuilder from '../views/RecipeBuilder.vue';
-import UserRecipeDetails from '../views/UserRecipeDetails.vue';
-import RecipeUpdate from '../views/RecipeUpdate.vue';
-import MealBuilder from '../views/MealBuilder.vue';
-import MealPlannerView from '../views/MealPlannerView.vue';
-import GroceryList from '../views/GroceryList.vue';
-import MealPlanDetails from '../views/MealPlanDetails.vue'
+
 //import { component } from 'vue/types/umd'
 
 
@@ -41,11 +33,6 @@ const router = new Router({
       }
     },
     {
-      path: "/build-recipe",
-      name: "build-recipe",
-      component: RecipeBuilder,
-    },
-    {
       path: "/login",
       name: "login",
       component: Login,
@@ -68,57 +55,7 @@ const router = new Router({
       meta: {
         requiresAuth: false
       }
-    },
-    {
-      path: '/recipes',
-      name: 'recipes',
-      component: Recipe
-    },
-    {
-      path: '/recipes/new-recipe',
-      name: 'new-recipe',
-      component: RecipeBuilder
-    },
-    {
-      path: '/recipes/:id',
-      name: 'recipe-details',
-      component: RecipeDetails,
-    },
-    {
-      path: '/user/recipes',
-      name: 'user-recipe-details',
-      component: UserRecipeDetails,
-      meta: {
-        requiresAuth: true
-      }
-    },
-    {
-      path: '/recipes/:id/update',
-      name: 'recipe-update',
-      component: RecipeUpdate,
-    },
-    {
-      path: '/meal-builder',
-      name: 'meal-builder',
-      component: MealBuilder,
-      props:{}
-    },
-    {
-      path: '/meal-planner',
-      name: 'meal-planner',
-      component: MealPlannerView
-    },
-    {
-      path: '/grocery-list',
-      name: 'grocery-list',
-      component: GroceryList
-    },
-    {
-      path: '/meal-plan-details/:date',
-      name: 'meal-plan-details',
-      component: MealPlanDetails,
     }
-
   ]
 })
 

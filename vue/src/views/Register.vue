@@ -76,40 +76,5 @@ export default {
 </script>
 
 <style scoped>
-#register {
-  display: flex;
-  justify-content: center;
-  margin-top: 15em;
-  background-color: #4A180C;
-  color: white;
-  box-shadow: 0px 6px 20px 0px black;
-  padding: 2rem;
-}
-#register h1{
-  padding-bottom: 2rem;
-}
-#register div{
-  margin: 1rem;
-}
-#register input{
-  color: black;
-}
-#register button{
-  color: black;
-  background-color: wheat;
-}
-#register button:hover{
-  background-color: darkkhaki;
-}
-#register a{
-  color: lightblue;
-}
-#register label{
-  margin-right: 1rem;
-}
-#register form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 </style>
