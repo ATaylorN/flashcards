@@ -16,15 +16,15 @@ public class JdbcQuestionDao implements QuestionDao {
         this.jdbcTemplate = jdbcTemplate;
     }
     @Override
-    public List<Question> getQuestion() {
-        List<Question> question = new ArrayList<>();
+    public Question getQuestion() {
+        Question question = null;
         String sql = "SELECT question_id, question, answer FROM questions ORDER BY random() LIMIT 1;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
-        while (results.next()) {
-            Question eachQuestion = mapRowToQuestion(results);
-            question.add(eachQuestion);
+        if (results.next()) {
+            return mapRowToQuestion(results);
+        } else {
+            return null;
         }
-        return question;
     }
     @Override
     public Question getQuestionById(int id) {
