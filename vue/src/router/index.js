@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import Register from '../views/Register.vue'
 import store from '../store/index'
+import QuestionView from '../views/QuestionView.vue'
 
 //import { component } from 'vue/types/umd'
 
@@ -31,6 +32,11 @@ const router = new Router({
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: "/questions",
+      name: "questions",
+      component: QuestionView
     },
     {
       path: "/login",
