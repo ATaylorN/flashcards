@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="http://localhost:8080/">Home</a></li>
-        <li><a href="http://localhost:8080/user/recipes">My Recipes</a></li>
+        <li><a href="http://localhost:8080/questions">Questions</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li> <router-link v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link> </li>
