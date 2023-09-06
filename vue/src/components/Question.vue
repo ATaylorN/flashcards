@@ -1,7 +1,16 @@
 <template>
   <div>
+  <div>
+    <p>{{randomQuestion.id}}</p>
     <p>{{randomQuestion.question}}</p>
-    <p>{{randomQuestion.answer}}</p>
+    <button>See Answer</button>
+  </div>
+    
+  <div>
+      <p>{{randomQuestion.answer}}</p>
+      <button>Back to Question</button>
+      <button>Next Question</button>
+  </div>
 
   </div>
 </template>
@@ -20,8 +29,7 @@ export default {
     }
   }
  },
- created: {
-  getQuestion() {
+ created() {
     QuestionService.getQuestion().then((response) => {
       if(response.status === 200){
         this.randomQuestion.id = response.data.id;
@@ -32,7 +40,6 @@ export default {
     .catch (error => {
       console.error(error);
     })
-  }
  }
 }
 </script>
