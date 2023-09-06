@@ -1,15 +1,14 @@
 <template>
   <div>
+
   <div>
-    <p>{{randomQuestion.id}}</p>
     <p>{{randomQuestion.question}}</p>
-    <button>See Answer</button>
+    <button @click="getQuestion()">New Question</button>
+    <button @click="toggleShowAnswer">Show Answer</button>
   </div>
     
-  <div>
+  <div v-show="showAnswer">
       <p>{{randomQuestion.answer}}</p>
-      <button>Back to Question</button>
-      <button>Next Question</button>
   </div>
 
   </div>
@@ -26,10 +25,12 @@ export default {
       id: '',
       question: '',
       answer: ''
-    }
+    },
+    showAnswer: false
   }
  },
- created() {
+ methods: {
+  getQuestion(){
     QuestionService.getQuestion().then((response) => {
       if(response.status === 200){
         this.randomQuestion.id = response.data.id;
@@ -40,6 +41,11 @@ export default {
     .catch (error => {
       console.error(error);
     })
+ },
+ toggleShowAnswer(){
+  this.showAnswer = !this.showAnswer;
+
+ }
  }
 }
 </script>
