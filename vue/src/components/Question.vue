@@ -1,14 +1,14 @@
 <template>
-  <div>
+  <div class="container pt-5">
 
   <div>
-    <p>{{randomQuestion.question}}</p>
+    <h1>{{randomQuestion.question}}</h1>
     <button @click="getQuestion()">New Question</button>
     <button @click="toggleShowAnswer">Show Answer</button>
   </div>
     
   <div v-show="showAnswer">
-      <p>{{randomQuestion.answer}}</p>
+      <h3>{{randomQuestion.answer}}</h3>
   </div>
 
   </div>
@@ -36,6 +36,7 @@ export default {
         this.randomQuestion.id = response.data.id;
         this.randomQuestion.question = response.data.question;
         this.randomQuestion.answer = response.data.answer;
+        this.showAnswer = false;
       }
     })
     .catch (error => {
