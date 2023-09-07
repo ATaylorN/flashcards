@@ -1,14 +1,29 @@
 <template>
-  <div>
-    <button @click="getQuestion()">Start</button>
-    <button @click="getNextQuestion()">Next Question</button>
+  <div class="container pt-5">
 
-    <button @click="markCorrect()">Correct</button>
-    <button @click="markIncorrect()">Incorrect</button>
-
-    <div >
-      <p>{{ randomQuestion.question }}</p>
+    <div class="questionSection" v-show="showQuestion">
+        <h1>{{randomQuestion.question}}</h1>
+        <button class="startbtn" @click="getQuestion()">Start</button>
+        <button class="nextbtn" @click="getNextQuestion()">Next Question</button>
+        <button class="answerbtn" @click="toggleShowAnswer">Show Answer</button>
+        <button @click="quit()">Quit</button>
     </div>
+    
+    <div class="answerSection" v-show="showAnswer">
+        <h3>{{randomQuestion.answer}}</h3>
+        <button class="correctbtn" @click="markCorrect()">Correct</button>
+         <button class="incorrectbtn" @click="markIncorrect()">Incorrect</button>
+    </div>
+
+    <div v-show="showStats">
+        <h3>Questions to Further Study:</h3>
+        <ul>
+            <li v-for="question in incorrect" :key="question">
+            <span>{{question}}</span>
+            </li>
+        </ul>
+    </div>
+
   </div>
 </template>
 
@@ -27,7 +42,9 @@ export default {
         question: "",
         answer: "",
       },
-      showAnswer: false
+      showAnswer: false,
+      showStats: false,
+      showQuestion: true
     }
   },
   methods: {
@@ -71,24 +88,67 @@ export default {
     },
     markCorrect(){
         if(this.incorrect.includes(this.randomQuestion.id)){
-            this.incorrect.pop(this.randomQuestion.id);
+            this.incorrect.pop(this.randomQuestion.question);
         }
-        this.correctlyAnswered.push(this.randomQuestion.id);
+        this.correctlyAnswered.push(this.randomQuestion.question);
         this.getNextQuestion();
     },
     markIncorrect(){
         if(this.correctlyAnswered.includes(this.randomQuestion.id)){
-            this.correctlyAnswered.pop(this.randomQuestion.id)
+            this.correctlyAnswered.pop(this.randomQuestion.question)
         }
-        this.incorrect.push(this.randomQuestion.id);
+        this.incorrect.push(this.randomQuestion.question);
         this.getNextQuestion();
     },
     toggleShowAnswer(){
         this.showAnswer = !this.showAnswer;
-    }
+    },
+    quit(){
+        this.showStats = true;
+        this.showQuestion = false;
+    },
   },
 };
 </script>
 
 <style>
+.questionSection {
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.questionSection h1{
+  margin-bottom: 2rem;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.questionSection button{
+  margin: 0.5rem;
+  background-color: rgb(34, 216, 216);
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  border: none;
+}
+.questionSection button:hover{
+  background-color: darkcyan;
+}
+.answerSection{
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 2rem;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.answerSection button{
+  margin: 0.5rem;
+  background-color: rgb(34, 216, 216);
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  border: none;
+}
+.answerSection button:hover{
+  background-color: darkcyan;
+}
+
 </style>

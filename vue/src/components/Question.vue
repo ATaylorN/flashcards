@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .questionSection {
   border: 5px solid black;
   border-radius: 10px;
