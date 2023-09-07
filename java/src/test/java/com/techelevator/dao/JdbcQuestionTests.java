@@ -26,9 +26,15 @@ public class JdbcQuestionTests extends BaseDaoTests{
 //    }
     @Test
     public void getQuestionById_returns_question(){
-        Question testquestion1 = dao.getQuestionById(QUESTION_1.getId());
-        Assert.assertEquals(1, testquestion1.getId());
+        Question testQuestion1 = dao.getQuestionById(QUESTION_1.getId());
+        Assert.assertEquals(1, testQuestion1.getId());
     }
+
+    @Test
+    public void getAllQuestions_returns_all_questions(){
+        Assert.assertEquals(3, dao.getAllQuestions().size());
+    }
+
 
 
 }

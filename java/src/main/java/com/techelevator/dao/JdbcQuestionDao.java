@@ -26,9 +26,25 @@ public class JdbcQuestionDao implements QuestionDao {
             return null;
         }
     }
+
+    @Override
+    public List<Question> getAllQuestions(){
+        List<Question> questions = new ArrayList<>();
+        String sql = "SELECT question_id, question, answer FROM questions;";
+        try {
+            SqlRowSet rows = jdbcTemplate.queryForRowSet(sql);
+            while (rows.next()){
+                questions.add(mapRowToQuestion(rows));
+            }
+        } catch (RuntimeException e){
+            throw new RuntimeException("Could load questions!");
+        }
+        return questions;
+    }
+
     @Override
     public Question getQuestionById(int id) {
-        String sql = "SELECT * FROM questions WHERE question_id = ?;";
+        String sql = "SELECT question_id, question, answer FROM questions WHERE question_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, id);
         if (results.next()){
             return mapRowToQuestion(results);
