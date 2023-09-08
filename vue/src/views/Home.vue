@@ -12,6 +12,8 @@
       <h3>Questions are listed at random.</h3>
       <router-link class="link" :to="{name: 'studyMode'}"><h2>Study Mode</h2></router-link>
       <h3>Mark a question as correct and it won't show up again or mark it as incorrect so that you know what to continue studying</h3>
+      <router-link class="link" :to="{name: 'quiz'}"><h2>Quiz</h2></router-link>
+      <h3>Tired of flashcards? Put your knowledge to the test with a quiz</h3>
     </div>
 
     </div>

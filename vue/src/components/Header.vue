@@ -6,6 +6,7 @@
       <li class="nav-item"><a class="nav-link" href="http://localhost:8080/">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="http://localhost:8080/questions">Random Question</a></li>
       <li class="nav-item"><a class="nav-link" href="http://localhost:8080/studyMode">Study Mode</a></li>
+      <li class="nav-item"><a class="nav-link" href="http://localhost:8080/quiz">Take a Quiz</a></li>
     </ul>
       <ul class="nav-link" id="logout">
         <li> <router-link v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''">Logout</router-link> </li>

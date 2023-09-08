@@ -7,6 +7,7 @@ import Register from '../views/Register.vue'
 import store from '../store/index'
 import QuestionView from '../views/QuestionView.vue'
 import StudyModeView from '../views/StudyModeView.vue'
+import QuizView from '../views/QuizView.vue'
 
 
 
@@ -45,6 +46,11 @@ const router = new Router({
       path: "/studyMode",
       name: "studyMode",
       component: StudyModeView
+    },
+    {
+      path: "/quiz",
+      name: "quiz",
+      component: QuizView
     },
     {
       path: "/login",
