@@ -38,7 +38,7 @@ export default {
 }
 .nav-link{
   text-align: center;
-  background-color: #427AA1;
+  background-color: #5acbf771;
   color: white;
   font-size: 20px;
 }
