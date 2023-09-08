@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-5">
+  <div class="container pt-5" id="whole">
 
     <div class="questionSection" v-show="showQuestion">
         <h1>{{randomQuestion.question}}</h1>
@@ -15,9 +15,9 @@
          <button class="incorrectbtn" @click="markIncorrect()">Incorrect</button>
     </div>
 
-    <div v-show="showStats">
+    <div v-show="showStats" class="study">
         <h3>Questions to Further Study:</h3>
-        <ul>
+        <ul class="questions">
             <li v-for="question in incorrect" :key="question">
             <span>{{question}}</span>
             </li>
@@ -112,10 +112,33 @@ export default {
 </script>
 
 <style>
+#whole{
+  margin-top: 2rem;
+}
+.study{
+  margin-top: 2rem;
+  border: none;
+  background-color: white;
+  color: #05668D;
+  padding: 2rem;
+  box-shadow: 0px 6px 20px 0px #05668D;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-radius: 10px;
+}
+.study h3{
+  font-size: 36px;
+  margin-bottom: 2rem;
+}
+.study span{
+  font-size: 22px;
+}
 .questionSection {
-  border: 5px solid black;
+  border: none;
+  color: #05668D;
   border-radius: 10px;
   padding: 2rem;
+  background-color: white;
+  box-shadow: 0px 6px 20px 0px #05668D;
 }
 .questionSection h1{
   margin-bottom: 2rem;
@@ -123,32 +146,37 @@ export default {
 }
 .questionSection button{
   margin: 0.5rem;
-  background-color: rgb(34, 216, 216);
+  background-color: #427AA1;
   color: white;
   border-radius: 8px;
   padding: 1rem;
   border: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  box-shadow: 0px 2px 8px 0px gray;
 }
 .questionSection button:hover{
-  background-color: darkcyan;
+  background-color: #A5BE00;
 }
 .answerSection{
-  border: 5px solid black;
+  background-color: white;
+  border: none;
+  color: #679436;
   border-radius: 10px;
   padding: 2rem;
   margin-top: 2rem;
   font-family: 'Roboto Condensed', sans-serif;
+  box-shadow: 0px 6px 20px 0px #A5BE00;
 }
 .answerSection button{
   margin: 0.5rem;
-  background-color: rgb(34, 216, 216);
+  background-color: #679436;
   color: white;
   border-radius: 8px;
   padding: 1rem;
   border: none;
 }
 .answerSection button:hover{
-  background-color: darkcyan;
+  background-color: #A5BE00;
 }
 
 </style>

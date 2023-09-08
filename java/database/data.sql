@@ -33,7 +33,7 @@ VALUES ('What is an object? What is a class?',
 
 INSERT INTO questions (question, answer)
 VALUES ('How is an array like a List(C#)/ArrayList(Java)? How are they different?',
-		'Arrays and Lists in C#(or ArrayLists in Java) both store multiple values. They can be accessed using indices. However, arrays have a fixed size once defined, while Lists (ArrayLists) are dynamic and can grow or shrink at runtime. Also, Lists provide more built-in methods such as `Add()`, `Remove()`, etc. compared to arrays.');
+		'Arrays and Lists in C#(or ArrayLists in Java) both store multiple values. They can be accessed using indices. However, arrays have a fixed size once defined, while Lists (ArrayLists) are dynamic and can grow or shrink at runtime. Also, Lists provide more built-in methods such as Add(), Remove(), etc. compared to arrays.');
 
 INSERT INTO questions (question, answer)
 VALUES ('Tell me about a Dictionary(C#)/HashMap(Java).',
@@ -65,23 +65,23 @@ VALUES ('What is Unit Testing? What tools are used to do automated Unit Testing?
 
 INSERT INTO questions (question, answer)
 VALUES ('What are the three principles of Object Oriented Programming?  Give an example for each.',
-		'The 3 principles of Object Oriented Programming are Encapsulation, Inheritance, and Polymorphism. Encapsulation: Data and methods are wrapped together in a class. For example, a `Person` class could encapsulate properties like `Name` and `Age`, and methods like `Speak()`. Inheritance: A class can inherit properties and methods from a parent class. For instance, a `Student` class could inherit from the `Person` class, thereby gaining its properties and methods. Polymorphism: A method can behave differently based on the object. For example, a `Shape` class might have a `Draw()` method. This method would behave differently if called on objects of the `Circle` or `Rectangle` class, assuming they inherit from `Shape`.');
+		'The 3 principles of Object Oriented Programming are Encapsulation, Inheritance, and Polymorphism. Encapsulation: Data and methods are wrapped together in a class. For example, a "Person" class could encapsulate properties like "Name" and "Age", and methods like Speak(). Inheritance: A class can inherit properties and methods from a parent class. For instance, a "Student" class could inherit from the "Person" class, thereby gaining its properties and methods. Polymorphism: A method can behave differently based on the object. For example, a "Shape" class might have a Draw() method. This method would behave differently if called on objects of the "Circle" or "Rectangle" class, assuming they inherit from "Shape".');
 
 INSERT INTO questions (question, answer)
 VALUES ('When catching Exceptions, should the code catch a specific exception type (like "Subscript out of bounds")  or the general "Exception" type? Why?',
-		'It`s generally best to catch specific exceptions. This allows you to handle different exception types in a tailored manner. Catching the general "Exception" type should be a last resort, as it can make debugging harder by masking other unexpected or unknown errors.');
+		'It is generally best to catch specific exceptions. This allows you to handle different exception types in a tailored manner. Catching the general "Exception" type should be a last resort, as it can make debugging harder by masking other unexpected or unknown errors.');
 
 INSERT INTO questions (question, answer)
 VALUES ('When writing files, what does it mean to append? What does it mean to not append?',
-		'Appending to a file means adding new data at the end of the file`s existing content. Not appending, often referred to as "overwriting", means replacing the file`s existing content with the new data. If the file doesn`t exist, it`s created in both cases.');
+		'Appending to a file means adding new data at the end of the file`s existing content. Not appending, often referred to as "overwriting", means replacing the file`s existing content with the new data. If the file does not exist, it is created in both cases.');
 
 INSERT INTO questions (question, answer)
 VALUES ('For an application that has a console user interface, reads and writes information to a file, and provides the ability to do CRUD (Create, Read, Update, and Delete) functions on the data in memory while executing, how might you organize and structure the classes and methods in your code?',
-		'You might structure your classes as follows: 1.DataModel class: Represents the data you`re working with, encapsulates properties relevant to the data. 2.FileHandler class: Handles all file operations, with methods such as `ReadFromFile`, `WriteToFile`, and `AppendToFile`. 3.CrudOperations class: Handles the in-memory CRUD operations. Methods could include `CreateData`, `ReadData`, `UpdateData`, and `DeleteData`. 4.UserInterface class: Manages interactions with the user via console. Has methods like `DisplayMenu`, `GetUserInput`, and `DisplayData`. Each class has its own responsibilities, promoting separation of concerns and making the code more maintainable. The `Program` class would coordinate these classes to perform the required tasks.');
+		'You might structure your classes as follows: 1. DataModel class: Represents the data you are working with, encapsulates properties relevant to the data. 2. FileHandler class: Handles all file operations, with methods such as ReadFromFile, WriteToFile, and AppendToFile. 3. CrudOperations class: Handles the in-memory CRUD operations. Methods could include CreateData, ReadData, UpdateData, and DeleteData. 4. UserInterface class: Manages interactions with the user via console. Has methods like DisplayMenu, GetUserInput, and DisplayData. Each class has its own responsibilities, promoting separation of concerns and making the code more maintainable. The "Program" class would coordinate these classes to perform the required tasks.');
 
 INSERT INTO questions (question, answer)
 VALUES ('What is pair programming? What are the basic rules? What are its advantages and disadvantages?',
-		'Pair programming involves two programmers working together at one workstation. One, the "driver", writes code while the other, the "navigator", reviews each line of code as it`s typed in. Basic rules include: 1.Switch roles regularly. 2.Both partners must understand the code. 3.Constant communication is key. Advantages include: 1.Improved code quality due to instant review. 2.Knowledge sharing and improved team collaboration. 3.Faster problem solving. Disadvantages include: 1.It may be less efficient for simpler tasks. 2.Conflicts may arise from differences in coding style or approach. 3.It requires good communication skills and patience.');
+		'Pair programming involves two programmers working together at one workstation. One, the "driver", writes code while the other, the "navigator", reviews each line of code as it is typed in. Basic rules include: 1. Switch roles regularly. 2. Both partners must understand the code. 3. Constant communication is key. Advantages include: 1. Improved code quality due to instant review. 2. Knowledge sharing and improved team collaboration. 3. Faster problem solving. Disadvantages include: 1. It may be less efficient for simpler tasks. 2. Conflicts may arise from differences in coding style or approach. 3. It requires good communication skills and patience.');
 
 
 COMMIT TRANSACTION;
