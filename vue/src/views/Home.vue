@@ -9,11 +9,11 @@
 
       <div class="studyOptions">
       <router-link class="link" :to="{name: 'questions'}"> <h2>Random</h2></router-link>
-      <h3>Questions are listed at random.</h3>
+      <h3>Questions are listed at random and there's no limit. Study until your heart's content!</h3>
       <router-link class="link" :to="{name: 'studyMode'}"><h2>Study Mode</h2></router-link>
-      <h3>Mark a question as correct and it won't show up again or mark it as incorrect so that you know what to continue studying</h3>
-      <router-link class="link" :to="{name: 'quiz'}"><h2>Quiz</h2></router-link>
-      <h3>Tired of flashcards? Put your knowledge to the test with a quiz</h3>
+      <h3>Select whether or not you got the question correct as you go and keep track of what you should spend more time studying on!</h3>
+      <router-link class="link" :to="{name: 'quiz'}"><h2>Take a Quiz</h2></router-link>
+      <h3>Tired of flashcards? Put your knowledge to the test with a quiz!</h3>
     </div>
 
     </div>
@@ -40,7 +40,7 @@ body {
   background-attachment: fixed;
 }
 #home{
-  margin-top: 10rem;
+  margin-top: 6rem;
 }
 .title{
   font-family: 'Roboto Condensed', sans-serif;

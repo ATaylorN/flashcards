@@ -8,8 +8,8 @@
 
     <div class="questionSection" v-show="showQuestion">
         <h1>{{question.question}}</h1>
-        <button class="nextbtn" @click="getNextQuestion()">Next Question</button>
         <button class="answerbtn" @click="toggleShowAnswer">Show Answer</button>
+        <!-- <button class="nextbtn" @click="getNextQuestion()">Next Question</button> -->
         <button @click="quit()">Quit</button>
     </div>
     
