@@ -11,7 +11,8 @@
       </div>
 
       <div v-else class="done">
-        <h1>Want to Try Again?</h1>
+        <h1 v-show="score !== questions.length">Want to Try Again?</h1>
+        <h1 v-show="score === questions.length">Perfect Score!</h1>
         <button class="restartbtn" type="button" @click="restart">
           Restart
         </button>

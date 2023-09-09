@@ -7,14 +7,14 @@
     </div>
 
     <div class="questionSection" v-show="showQuestion">
-        <h1>{{randomQuestion.question}}</h1>
+        <h1>{{question.question}}</h1>
         <button class="nextbtn" @click="getNextQuestion()">Next Question</button>
         <button class="answerbtn" @click="toggleShowAnswer">Show Answer</button>
         <button @click="quit()">Quit</button>
     </div>
     
     <div class="answerSection" v-show="showAnswer">
-        <h3>{{randomQuestion.answer}}</h3>
+        <h3>{{question.answer}}</h3>
         <button class="correctbtn" @click="markCorrect()">Correct</button>
          <button class="incorrectbtn" @click="markIncorrect()">Incorrect</button>
     </div>
@@ -23,12 +23,11 @@
         <h3>Questions to Further Study:</h3>
         <ul class="questions">
             <li v-for="question in incorrect" :key="question">
-            <span>{{question}}</span>
+            <span>{{question.question}}</span>
             </li>
         </ul>
         <button @click="changeRoute('/')">Done</button>
     </div>
-
   </div>
 </template>
 
@@ -42,10 +41,10 @@ export default {
       allQuestions: [],
       correctlyAnswered: [],
       incorrect: [],
-      randomQuestion: {
+      question: {
         id: "",
         question: "",
-        answer: "",
+        answer: ""
       },
       showAnswer: false,
       showStats: false,
@@ -68,40 +67,36 @@ export default {
           console.error(error);
         });
     },
-    getQuestion() {
-      QuestionService.getQuestion()
-        .then((response) => {
-          if (response.status === 200) {
-            this.randomQuestion.id = response.data.id;
-            this.randomQuestion.question = response.data.question;
-            this.randomQuestion.answer = response.data.answer;
-            this.showAnswer = false;
-            this.showQuestion = true;
-            this.showStart = false;
-          }
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+    getQuestion(){
+      QuestionService.getQuestionById(1).then((response) => {
+        if(response.status === 200){
+          this.question = response.data;
+          this.showQuestion = true;
+          this.showStart = false;
+          this.getAllQuestions();
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      })
     },
-    getNextQuestion() {
-      QuestionService.getQuestionById(this.randomQuestion.id + 1).then((response) => {
-        if(response.data.id != null){
-            this.randomQuestion.id = response.data.id;
-            this.randomQuestion.question = response.data.question;
-            this.randomQuestion.answer = response.data.answer;
-            this.showAnswer = false;
-        }else {
-          this.quit();
+    getNextQuestion(){
+      QuestionService.getQuestionById(this.question.id + 1). then((response) => {
+        if(response.status === 200 && this.question.id < this.allQuestions.length){
+          this.question = response.data;
+          this.showAnswer = false;
+        }
+        else {
+          this.getQuestion();
         }
       })
     },
     markCorrect(){
-        this.correctlyAnswered.push(this.randomQuestion.id);
+        this.correctlyAnswered.push(this.question);
         this.getNextQuestion();
     },
     markIncorrect(){
-        this.incorrect.push(this.randomQuestion.question);
+        this.incorrect.push(this.question);
         this.getNextQuestion();
     },
     toggleShowAnswer(){

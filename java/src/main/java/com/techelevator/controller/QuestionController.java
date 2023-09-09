@@ -18,6 +18,7 @@ public QuestionController (QuestionDao questionDao){
 }
 
 @ResponseStatus(HttpStatus.OK)
+@CrossOrigin
 @RequestMapping(value="", method = RequestMethod.GET)
     public Question getQuestion(){
     Question question = null;
@@ -30,6 +31,7 @@ public QuestionController (QuestionDao questionDao){
 }
 
 @ResponseStatus(HttpStatus.OK)
+@CrossOrigin
 @RequestMapping(value="/getAll", method = RequestMethod.GET)
     public List<Question> getAllQuestions(){
     List<Question> questions = new ArrayList<>();
@@ -41,6 +43,8 @@ public QuestionController (QuestionDao questionDao){
     return questions;
 }
 
+@ResponseStatus(HttpStatus.OK)
+@CrossOrigin
 @RequestMapping(value="/{id}", method=RequestMethod.GET)
     public Question getQuestionById(@PathVariable int id){
     Question question = null;
