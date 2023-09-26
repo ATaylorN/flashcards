@@ -180,8 +180,170 @@ VALUES ('In JavaScript, this symbol (=>) is referred to by what name? What JavaS
 		'It is called an arrow function and replaces the function keyword when defining a function. Bonus: It is also referred to as a fat arrow, lambda, anonymous function, or closure, but these terms have broader meanings.');
 
 INSERT INTO questions (question, answer)
-VALUES ('The major elements of a SQL SELECT are written in a certain order. What is that order?',
-		'The order in a SQL SELECT statement is: SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY. Each clause is optional except for SELECT and FROM.');
+VALUES ('Describe some advantages and disadvantages of Vue.js over Vanilla JavaScript?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('How is the event-driven style of program execution different from the sequential style of execution utilized in simple console programs during the first few weeks of the program?',
+		'Sequential execution runs code line by line from top to bottom. It is straightforward but does not handle user interaction or simultaneous tasks well. Event-driven execution responds to user actions or system events (like clicks or key presses). It is less predictable because code execution depends on the events and their order. This style is more suited for interactive applications like websites or desktop applications where user input needs to be processed at unknown times.');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is mustache notation in Vue.js and how is it different from v-model binding? Where is v-model binding mostly seen in Vue.js?',
+		'The double curly braces aka mustache notation are used to render data properties from a components HTML through data binding. V-model binding creates a two-way binding relationship. Elements update automatically to reflect changes to data properties AND data properties update to reflect changes to elements.');
+
+INSERT INTO questions (question, answer)
+VALUES ('Why do we use prevent with some Vue.js events? Bonus: what event on what element should be handled for an input element of type submit?',
+		'We use prevent because some events trigger a default action in the browser and prevent allows you to stop that action if you do not want it to occur. For example, you may need to use the preventDefault() method in your form element because when a user clicks a submit button, the browser attempts to send form data to a remote server.');
+
+INSERT INTO questions (question, answer)
+VALUES ('How are v-if and v-show alike? How are they different?',
+		'When you wrap an element in v-if, you associate it with a boolean condition which determines whether the element appears in the DOM. While v-if conditionally renders an element, v-show conditionally displays an element. The difference is that v-if needs to destroy and recreate elements with every status change while v-show hides an element by toggling its CSS display status.');
+
+INSERT INTO questions (question, answer)
+VALUES ('What are two ways that Vue.j components can pass data from component to component? Which one is intended to be used between parent and child components? Which one can be used between any commponents in an application?',
+		'You can import a component to be used in another component by: importing the component, declaring the component in the components object, and then use the component in your template or through using props. Props are intended to be used between parent and child components while the first method can be used between any components.');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is the role of router-view in the default Vue.js router?',
+		'It is a functional component that renders the matched component for the given path, meaning that it will display the component that corresponds to the URL.');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is the role of the created function of a Vue.js component?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('In Vue.js component script sections, what elements are peers - exist at the same level - as the data section?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What information does a promise retrun in JavaScript? What are three possible states for a promise?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('In Vue.js, where must we use this with variables and methods-functions in the methods section? Where do we not need to use the this keyword?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('In Vue.js, router-link and router.push are both used to navigate from the current view to another view using the router. When should you use each?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('You are developing a Vue.js application with a web service providing the data. The web service has been tested with Postman and is working correctly. You create a Vue.js component that should display informtaion retrieved from the web service. Nothing is displayed on the web browser. What do you look at and what do you do to determine where the problem exists?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('How are a for-loop and a while-loop alike? How are they different?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is the difference between overloading and overriding? Does JavaScript support overloading?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('In Java or C#, how are methods and constructors alike? How are they different?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('In Java or C#, what it the difference between value-primitive types and reference types? How are they represented in memory?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('You are retrieving data from a database for a server program. All other things being equal, should you retrieve all of the data from a table and filter it in the server application OR should you use the RDBMs to select just the information that you want? Why? What factors might cause you to change your decicion?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What purpose does the Vuex data store serve in Vue.js? What is a circumstance when you might NOT want to use Vuex?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What elements make us the signature of a method in Java or C#?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is a static class? How is it used differently than a non-static class?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is the difference between a stack and a queue?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is the difference between a primary key and a foreign key in a relational database?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('The first element of the signature of a method is the access modifier. What access modifiers fo you know and what do they mean?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('How is JavaScript like C# or Java? How is it different?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('How would you explain APIs to a non-technical team member?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is REST?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is the purpose of computed properties in Vue.js? How are they different from methods?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is the purpose of semantic HTML?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('Describe the CSS box model.',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('How does garbage collectioni work? What things are not garbage collected?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What are serialization and deserialization? How are they used when communicating using the REST architecture?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('Can you describe a Vue.js lifecycle hook that you have used and how you have used it?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('How is an if statement like a while statement? How are they different?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('How many constructors can a class have? How may constructors can be used when creating a simple object?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('WHat value-primitive data types can you name for Java or C#? What kind of information would you use each one for?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('The keywords final in Java and const in C# mean approximately the same thing. What do the mean?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('Explain the concept of a RESTful API',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is the difference between the HTTP and HTTPS protocols?',
+		'');
+
+INSERT INTO questions (question, answer)
+VALUES ('What is the different data types in JavaScript?',
+		'');		
+
+INSERT INTO questions (question, answer)
+VALUES ('What are truthy and falsy values in JavaScript?',
+		'');
+
+
 
 
 COMMIT TRANSACTION;
