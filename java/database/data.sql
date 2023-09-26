@@ -83,5 +83,23 @@ INSERT INTO questions (question, answer)
 VALUES ('What is pair programming? What are the basic rules? What are its advantages and disadvantages?',
 		'Pair programming involves two programmers working together at one workstation. One, the "driver", writes code while the other, the "navigator", reviews each line of code as it is typed in. Basic rules include: 1. Switch roles regularly. 2. Both partners must understand the code. 3. Constant communication is key. Advantages include: 1. Improved code quality due to instant review. 2. Knowledge sharing and improved team collaboration. 3. Faster problem solving. Disadvantages include: 1. It may be less efficient for simpler tasks. 2. Conflicts may arise from differences in coding style or approach. 3. It requires good communication skills and patience.');
 
+INSERT INTO questions (question, answer)
+VALUES ('What is a RDBMS? Can you name some commercial and open-source RDBMSs?',
+		'An RDBMS, or Relational Database Management System, is software for creating and managing databases bases on the relational model. Commercial RDBMSs include Oracle Database, Microsoft SQL Server, and IBM DB2. Open-source RDBMSs include MySQL, PostgreSQL, and SQLite.');
+
+INSERT INTO questions (question, answer)
+VALUES ('The major elements of a SQL SELECT are written in a certain order. What is that order?',
+		'The order in a SQL SELECT statement is: SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY. Each clause is optional except for SELECT and FROM.');
+
+INSERT INTO questions (question, answer)
+VALUES ('What are the special considerations for GROUP BY in SQL queries?',
+		'In SQL, GROUP BY is used to group rows with the same values in specified columns into aggregated data. Special considerations include: GROUP BY clause can group by one or more columns. Columns in the SELECT statement that are not aggregated should be included in the GROUP BY clause. It is often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) to perform calculatioins on each group. WHERE clause is applied before GROUP BY. HAVING is applied after and is used to filter the groups.');
+
+INSERT INTO questions (question, answer)
+VALUES ('What are the two forms of the INSERT statement in SQL? Which is preferred and why?',
+		'The two forms of the INSERT statement in SQL are: INSERT INTO table_name VALUES (value1, value2,...) and INSERT into table_name (column1, column2,...) VALUES (value1, value2,...). The second version is preferred because it allows for clarity by specifying column names and enables insertion into specific columns even if you do not have values for all of the columns.');
+
+
+
 
 COMMIT TRANSACTION;
