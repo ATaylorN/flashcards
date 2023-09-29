@@ -180,8 +180,8 @@ VALUES ('In JavaScript, this symbol (=>) is referred to by what name? What JavaS
 		'It is called an arrow function and replaces the function keyword when defining a function. Bonus: It is also referred to as a fat arrow, lambda, anonymous function, or closure, but these terms have broader meanings.');
 
 INSERT INTO questions (question, answer)
-VALUES ('Describe some advantages and disadvantages of Vue.js over Vanilla JavaScript?',
-		'');
+VALUES ('Describe some advantages of Vue.js over Vanilla JavaScript?',
+		'The advantages include supporting encapsulation by bundling the HTML, CSS, and JavaScript together for an element in a web application which allows individuals to work on a component without having to understand the complexity of the wider application. It supports reusability and allows you to share these components across applications and teams. It also allows for single-responsibility which helps to support component reuse and makes a component easier to test and maintain.');
 
 INSERT INTO questions (question, answer)
 VALUES ('How is the event-driven style of program execution different from the sequential style of execution utilized in simple console programs during the first few weeks of the program?',
