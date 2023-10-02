@@ -209,43 +209,42 @@ VALUES ('What is the role of router-view in the default Vue.js router?',
 
 INSERT INTO questions (question, answer)
 VALUES ('What is the role of the created function of a Vue.js component?',
-		'');
+		'Each component contains the HTML, CSS, and JavaScript associated with a particular feature of the application. Developers can assemble these components into more sophisticated components and eventually into the desired application.');
 
 INSERT INTO questions (question, answer)
 VALUES ('In Vue.js component script sections, what elements are peers - exist at the same level - as the data section?',
-		'');
+		'The computed section, name, props, methods, and lifecycle hooks like created, mounted, updated, and destroyed');
 
 INSERT INTO questions (question, answer)
 VALUES ('What information does a promise retrun in JavaScript? What are three possible states for a promise?',
-		'');
+		'It returns the results of asynchronous methods. It can be in either a pending state (neither fulfilled nor rejected), fulfilled(completed successfully), or rejected(the operation failed).');
 
 INSERT INTO questions (question, answer)
-VALUES ('In Vue.js, where must we use this with variables and methods-functions in the methods section? Where do we not need to use the this keyword?',
-		'');
+VALUES ('In Vue.js, where must we use this with variables and methods-functions in the methods section?',
+		'You have to use the this keyword anytime that you are trying to refer to information held in the data property inside the method.');
 
 INSERT INTO questions (question, answer)
 VALUES ('In Vue.js, router-link and router.push are both used to navigate from the current view to another view using the router. When should you use each?',
-		'');
+		'You use the router-link when you want to provide a link to one of your routes. Router.push redirects the user to the designated page like if a user completes a transaction and the page redirects them back to the products list.');
 
 INSERT INTO questions (question, answer)
 VALUES ('You are developing a Vue.js application with a web service providing the data. The web service has been tested with Postman and is working correctly. You create a Vue.js component that should display informtaion retrieved from the web service. Nothing is displayed on the web browser. What do you look at and what do you do to determine where the problem exists?',
-		'');
+		'The first thing that you should check is the console for error messages. You can chain a catch method to your methods as well so that if a particular method fails, you can hone in on which one failed.');
 
 INSERT INTO questions (question, answer)
 VALUES ('How are a for-loop and a while-loop alike? How are they different?',
-		'');
+		'A for loop is used when you want code to repeat a defined number of times, for example, one time for each element in an array. A while loop is used when you want to continually execute a block of code as long as a condition remains true.');
 
 INSERT INTO questions (question, answer)
-VALUES ('What is the difference between overloading and overriding? Does JavaScript support overloading?',
-		'');
-
+VALUES ('What is overloading? Does JavaScript support overloading?',
+		'Overloading allows you to provide users of your class with different options when they instantiate new objects or invoke methods. It means that two or more functions can have the same name but different parameters. JavaScript allows only one function with a given name and therefore does not support overloading. The last one defined will just override any previous ones.');
 INSERT INTO questions (question, answer)
 VALUES ('In Java or C#, how are methods and constructors alike? How are they different?',
-		'');
+		'Methods are used when you need an object to "do something" or perform a certain behavior. Constructors are a special type of method that initializes an object of that class.');
 
 INSERT INTO questions (question, answer)
 VALUES ('In Java or C#, what it the difference between value-primitive types and reference types? How are they represented in memory?',
-		'');
+		'Primitive data types are values like  42, true, or a and consumes a fixed amount of memory and are stored in the stack. A reference type stores complex data, such as an array of numbers. The variable is still created in the stack, but the array itself is created in the heap');
 
 INSERT INTO questions (question, answer)
 VALUES ('You are retrieving data from a database for a server program. All other things being equal, should you retrieve all of the data from a table and filter it in the server application OR should you use the RDBMs to select just the information that you want? Why? What factors might cause you to change your decicion?',
