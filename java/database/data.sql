@@ -296,23 +296,23 @@ VALUES ('What is the purpose of semantic HTML?',
 
 INSERT INTO questions (question, answer)
 VALUES ('Describe the CSS box model.',
-		'');
+		'The browser treats elements as rectangles. Padding - the space inside an element, border - the edge of an element, and margin - the space outside an element, are commonly referred to as the box model. These properties, along with height and width, allow you to adjust an elements preferred size.');
 
 INSERT INTO questions (question, answer)
-VALUES ('How does garbage collectioni work? What things are not garbage collected?',
-		'');
+VALUES ('How does garbage collection work? What things are not garbage collected?',
+		'Garbage collection is the process in which programs try to free up memory space that is no longer used by objects. In C, C++, the programmer is resposible for destroying objects and if not done can lead to OutOfMemoryErrors. In Java, it runs in the background automatically. To make an object eligible for GC, it just needs to be unreachable. It can be made unreachable by nullifying the reference variable, re-assigning the reference variable, an object inside the method, or island of isolation.');
 
 INSERT INTO questions (question, answer)
 VALUES ('What are serialization and deserialization? How are they used when communicating using the REST architecture?',
-		'');
+		'Serialize means converting an object into a string while deserialize means converting a string into an object. When making a request to the server, you will often need to submit data as well. The RestTemplate automatically serializes the data you submit as an object into a format the the server can read.');
 
 INSERT INTO questions (question, answer)
 VALUES ('Can you describe a Vue.js lifecycle hook that you have used and how you have used it?',
-		'');
+		'A lifecycle hook is a special method that is called at certain times as a Vue component is loaded and unloaded from the page. One of the most common is created(), which is called when a component is first built by the browser but before its shown to the user.');
 
 INSERT INTO questions (question, answer)
 VALUES ('How is an if statement like a while statement? How are they different?',
-		'');
+		'In an if statement, the code is run once if the condition is true. In a while statement, the code is also run when the condition is true, but it does not stop running until the condition is no longer true.');
 
 INSERT INTO questions (question, answer)
 VALUES ('How many constructors can a class have? How may constructors can be used when creating a simple object?',
