@@ -248,15 +248,15 @@ VALUES ('In Java or C#, what it the difference between value-primitive types and
 
 INSERT INTO questions (question, answer)
 VALUES ('You are retrieving data from a database for a server program. All other things being equal, should you retrieve all of the data from a table and filter it in the server application OR should you use the RDBMs to select just the information that you want? Why? What factors might cause you to change your decicion?',
-		'');
+		'As a general rule of thumb, you should retrieve only the information that you need. If you pull everything, you could end up with non-synchronized data. Imagine a user updating a contact, for example, while someone else is viewing that information from a cached version inside their application. Another thing to consider, is that pulling only what you need is faster than pulling a whole database with every query.');
 
 INSERT INTO questions (question, answer)
 VALUES ('What purpose does the Vuex data store serve in Vue.js? What is a circumstance when you might NOT want to use Vuex?',
-		'');
+		'Vuex is a state management pattern and library for Vue.js applications and serves as a centralized store for all the components in an application, with rules ensuring that the state (data) can only be mutated (changed) in a predictable fashion. Vuex can be cumbersome so some simple applications make more sense to not use Vuex.');
 
 INSERT INTO questions (question, answer)
-VALUES ('What elements make us the signature of a method in Java or C#?',
-		'');
+VALUES ('What elements make up the signature of a method in Java or C#?',
+		'The signature of a method consists of an access modifier, a return type, a method name, a parameter list, an exception list, and a method body.');
 
 INSERT INTO questions (question, answer)
 VALUES ('What is a static class? How is it used differently than a non-static class?',
