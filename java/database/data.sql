@@ -260,19 +260,19 @@ VALUES ('What elements make up the signature of a method in Java or C#?',
 
 INSERT INTO questions (question, answer)
 VALUES ('What is a static class? How is it used differently than a non-static class?',
-		'');
+		'The static keyword declares that a property or method belongs to the class itself and not an instance of it. One way to think of static properties and methods is that there is only one version of it, regardless of how many instances there are.');
 
 INSERT INTO questions (question, answer)
 VALUES ('What is the difference between a stack and a queue?',
-		'');
+		'A stack is a last-in, first-out data structure that allows you to push and pop items on an off the top of the collection. A queue is a first-in, first-out data structure where new items are added at the end and existing items are pulled from the beginning.');
 
 INSERT INTO questions (question, answer)
 VALUES ('What is the difference between a primary key and a foreign key in a relational database?',
-		'');
+		'A primary key uniquely identifies entries in a table, may be called a simple key if it is a single column or a composite key if it consists of several columns. It must be unique and can not be NULL. Foreign keys are used to link two tables together. It is a field of collection of fields in one table that refers to the primary key in another table.');
 
 INSERT INTO questions (question, answer)
 VALUES ('The first element of the signature of a method is the access modifier. What access modifiers fo you know and what do they mean?',
-		'');
+		'An access modifier controls the visibilty to methods and properties from the rest of your program. Public, meaning other code can use or invoke it, and private, meaning they are only visible from within the class, are two of the most common. There is also default and protected. Non-access modifiers include final, abstract, static, transient, synchronizes, and volatile.');
 
 INSERT INTO questions (question, answer)
 VALUES ('How is JavaScript like C# or Java? How is it different?',
