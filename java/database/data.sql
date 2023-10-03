@@ -315,32 +315,28 @@ VALUES ('How is an if statement like a while statement? How are they different?'
 		'In an if statement, the code is run once if the condition is true. In a while statement, the code is also run when the condition is true, but it does not stop running until the condition is no longer true.');
 
 INSERT INTO questions (question, answer)
-VALUES ('How many constructors can a class have? How may constructors can be used when creating a simple object?',
-		'');
+VALUES ('How many constructors can a class have?',
+		'A class can have any number of constructors, as long as they have different parameter lists.');
 
 INSERT INTO questions (question, answer)
-VALUES ('WHat value-primitive data types can you name for Java or C#? What kind of information would you use each one for?',
-		'');
+VALUES ('What value-primitive data types can you name for Java or C#? What kind of information would you use each one for?',
+		'Primitive data types include boolean - true or false, byte, short, int, long, float, double, and char. Int and long both store intgers, but long can hold significantly larger numbers. Float and double both store decimal points, but double offers higher precision.');
 
 INSERT INTO questions (question, answer)
 VALUES ('The keywords final in Java and const in C# mean approximately the same thing. What do the mean?',
-		'');
-
-INSERT INTO questions (question, answer)
-VALUES ('Explain the concept of a RESTful API',
-		'');
+		'A final class is a class that other classes can not inherit from. A final method is a method that a child class can not override. The final keyword communicates that the class or method needs to remain unchanged.');
 
 INSERT INTO questions (question, answer)
 VALUES ('What is the difference between the HTTP and HTTPS protocols?',
-		'');
+		'HTTP is hypertext transfer protocol. HTTPS is hypertext transfer protocol secure and is HTTP, but with encrypted data.');
 
 INSERT INTO questions (question, answer)
-VALUES ('What is the different data types in JavaScript?',
-		'');		
+VALUES ('What are the different data types in JavaScript?',
+		'Data types in JavaScript are similar to those in Java and include Number - a 64bit double precision value like a double, String, Boolean, Object, null, and undefined.');		
 
 INSERT INTO questions (question, answer)
 VALUES ('What are truthy and falsy values in JavaScript?',
-		'');
+		'In boolean contexts, all values in JavaScript are considered true or false. The values considered false are 0, -0, ''(empty string), undefined, null, and NaN. All other values are consided true. This means, for example, that the expression !null evaluates to true.);
 
 
 
