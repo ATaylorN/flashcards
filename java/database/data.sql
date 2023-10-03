@@ -276,23 +276,23 @@ VALUES ('The first element of the signature of a method is the access modifier. 
 
 INSERT INTO questions (question, answer)
 VALUES ('How is JavaScript like C# or Java? How is it different?',
-		'');
+		'They have similar data types, arithmetic operators, conditional logic, scope, arrays, loops, etc. JavaScript is different in that it is a loosely typed language and variables are not associated with any particular data type when you declare them. Variables can be assigned and reassigned values of any data type.');
 
 INSERT INTO questions (question, answer)
 VALUES ('How would you explain APIs to a non-technical team member?',
-		'');
+		'API stands for apllication programming interface and allows the transfer of data between different computer programs. For example, the Amazon app on your phone is small and does not contain all the data for every product Amazon sells. It also allows your to see new info for products that did not exist when you installed the app. It does this by using an API to get data from Amazon servers by making requests behind the scenes.');
 
 INSERT INTO questions (question, answer)
 VALUES ('What is REST?',
-		'');
+		'REST stands for Representational State Transfer and is a series of guidelines for defining Web Services that are flexible and usable by a wide range of services. It should have a uniform interface, client-server decoupling (client and server are independent of one another), statelessness, cacheablility, layered system architecture, and code on demand (optional).');
 
 INSERT INTO questions (question, answer)
 VALUES ('What is the purpose of computed properties in Vue.js? How are they different from methods?',
-		'');
+		'A computed property stores the process of generating a desired piece of data rather than the data itself. They are functions that filter or calculate information from exisiting data. Differences between it and methods include: that it is automatically updated, it does not accept parameters, and it is evaluated when its underlying values change as opposed to when called upon like a method.');
 
 INSERT INTO questions (question, answer)
 VALUES ('What is the purpose of semantic HTML?',
-		'');
+		'It means of or relating to meaning in language and is a key component to a much larger and ambitious project, the Semantic Web (originally proposed by Sir Tim Berners-Lee - the creator of the World Wide Web). It allows for more intelligent searches by providing additional context or meaning to the words beyond the fact they match. It helps with accessibility.');
 
 INSERT INTO questions (question, answer)
 VALUES ('Describe the CSS box model.',
