@@ -37,7 +37,7 @@ public class JdbcQuestionDao implements QuestionDao {
                 questions.add(mapRowToQuestion(rows));
             }
         } catch (RuntimeException e){
-            throw new RuntimeException("Could load questions!");
+            throw new RuntimeException("Couldn't load questions!");
         }
         return questions;
     }

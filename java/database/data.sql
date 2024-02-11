@@ -336,7 +336,7 @@ VALUES ('What are the different data types in JavaScript?',
 
 INSERT INTO questions (question, answer)
 VALUES ('What are truthy and falsy values in JavaScript?',
-		'In boolean contexts, all values in JavaScript are considered true or false. The values considered false are 0, -0, ''(empty string), undefined, null, and NaN. All other values are consided true. This means, for example, that the expression !null evaluates to true.);
+		'In boolean contexts, all values in JavaScript are considered true or false. The values considered false are 0, -0, ''(empty string), undefined, null, and NaN. All other values are consided true. This means, for example, that the expression !null evaluates to true.');
 
 
 
