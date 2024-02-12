@@ -1,5 +1,6 @@
-
 # FlashCardsApp 
+
+[![My Skills](https://skillicons.dev/icons?i=js,postman,html,css,bootstrap,idea,java,vue,nodejs,spring,vscode,postgres)](https://skillicons.dev)
 
 [![Generic badge](https://img.shields.io/badge/STATUS-COMPLETE-GREEN.svg)](https://shields.io/)
 
